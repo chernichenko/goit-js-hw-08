@@ -1,6 +1,4 @@
-import * as basicLightbox from 'basiclightbox';
-
-// Массив зображень
+// Масив зображень
 const images = [
   {
     preview: 'https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820__480.jpg',
@@ -83,8 +81,9 @@ function onGalleryItemClick(event) {
 
   const originalImageUrl = event.target.dataset.source;
 
+  // Додаємо overlay та зображення
   const instance = basicLightbox.create(`
-    <div class="modal">
+    <div class="modal-image-wrap">
       <img src="${originalImageUrl}" width="800" height="600">
     </div>
   `);

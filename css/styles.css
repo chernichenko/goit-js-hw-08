@@ -10,16 +10,18 @@ body {
 }
 
 .gallery {
+  max-width: 1128px;
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 24px;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .gallery-item {
-  flex-basis: calc(33.333% - 10px);
+  width: calc(33.33% - 16px);
+  max-width: 360px;
   overflow: hidden;
 }
 
@@ -36,4 +38,22 @@ body {
 
 .gallery-image:hover {
   transform: scale(1.05);
+}
+
+.modal-image-wrap img {
+  max-width: calc(100vw - 32px);
+  height: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .gallery-item {
+    width: calc(50% - 12px);
+    max-width: initial;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-item {
+    width: 100%;
+  }
 }
